@@ -1,5 +1,4 @@
 "use client";
-
 import { getProviders, signIn } from "next-auth/react";
 
 type Props = {
