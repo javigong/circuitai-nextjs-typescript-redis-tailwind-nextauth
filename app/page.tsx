@@ -1,4 +1,5 @@
 import { unstable_getServerSession } from "next-auth";
+import { authOptions } from "../pages/api/auth/[...nextauth]";
 import ChatInput from "./ChatInput";
 import MessageList from "./MessageList";
 import Providers from "./providers";
@@ -6,13 +7,13 @@ import Providers from "./providers";
 type Props = {};
 
 const HomePage = async (props: Props) => {
-  const session = await unstable_getServerSession();
+  const session = await unstable_getServerSession(authOptions);
 
   return (
     <Providers session={session}>
       <main>
         <MessageList />
-        <ChatInput session={session!} />
+        <ChatInput session={session} />
       </main>
     </Providers>
   );
