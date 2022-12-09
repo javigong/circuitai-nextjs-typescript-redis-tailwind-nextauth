@@ -8,7 +8,6 @@ type Props = {};
 
 const Header = async (props: Props) => {
   const session = await unstable_getServerSession(authOptions);
-  console.log(session);
 
   if (session)
     return (
@@ -34,7 +33,7 @@ const Header = async (props: Props) => {
     );
 
   return (
-    <div>
+    <>
       <header className="sticky top-0 z-50 bg-white flex justify-center items-center p-10 shadow-sm">
         <div className="flex flex-col items-center space-y-5">
           <div className="flex space-x-2 items-center">
@@ -54,7 +53,7 @@ const Header = async (props: Props) => {
           </Link>
         </div>
       </header>
-    </div>
+    </>
   );
 };
 
