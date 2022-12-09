@@ -34,7 +34,7 @@ const Header = async (props: Props) => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white flex justify-center items-center p-10 shadow-sm">
+      <header className="sticky top-0 z-50 bg-white flex justify-between items-center p-10 shadow-sm">
         <div className="flex flex-col items-center space-y-5">
           <div className="flex space-x-2 items-center">
             <Image
@@ -45,13 +45,13 @@ const Header = async (props: Props) => {
             />
             <p className="text-[#74E6DA]">Welcome to CircuitAI</p>
           </div>
-          <Link
-            className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
-            href="/auth/signin"
-          >
-            Sign In
-          </Link>
         </div>
+        <Link
+          className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
+          href="/auth/signin"
+        >
+          Sign In
+        </Link>
       </header>
     </>
   );
