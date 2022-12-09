@@ -24,7 +24,7 @@ const ChatInput = ({ session }: Props) => {
   const addMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!input) return;
+    if (!input || !session) return;
 
     const messageToSend = input;
     setInput("");
