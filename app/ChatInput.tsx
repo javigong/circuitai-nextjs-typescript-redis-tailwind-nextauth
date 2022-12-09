@@ -8,7 +8,7 @@ import { IMessage } from "../types/typings";
 import fetchMessages from "../utils/fetchMessages";
 
 type Props = {
-  session: Session;
+  session: Session | null;
 };
 
 const ChatInput = ({ session }: Props) => {
