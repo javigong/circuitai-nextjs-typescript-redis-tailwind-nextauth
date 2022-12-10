@@ -12,12 +12,13 @@ type Props = {
 };
 
 const ChatInput = ({ session }: Props) => {
+  const userSession = session?.user?.email?.replace("@", "").replace(".", "");
   const [input, setInput] = useState("");
   const {
     data: messages,
     error,
     mutate,
-  } = useSWR("/api/getMessages", fetchMessages);
+  } = useSWR(`/api/getMessages/${userSession!}`, fetchMessages);
 
   console.log({ messages });
 
@@ -46,6 +47,7 @@ const ChatInput = ({ session }: Props) => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          userSession,
           message,
         }),
       }).then((res) => res.json());
@@ -53,11 +55,59 @@ const ChatInput = ({ session }: Props) => {
       return [data.message, ...messages!];
     };
 
-    await mutate(uploadMessageToRedis, {
+    const mutateUploadMessagesToRedis = await mutate(uploadMessageToRedis, {
       optimisticData: [message, ...messages!],
       rollbackOnError: true,
     });
+
+    if (mutateUploadMessagesToRedis) {
+      sendOpenAiAnswerToRedis(messageToSend);
+    }
   };
+
+  const sendOpenAiAnswerToRedis = async (messageToSend: string) => {
+    // OpenAI generate answer
+    const openAiResponse = await fetch("/api/generateAnswer", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ question: messageToSend }),
+    });
+    const openAiData = await openAiResponse.json();
+    console.log(messageToSend);
+
+    // Send answer to Redis
+    const idOpenAi = uuid();
+    const messageOpenAi: IMessage = {
+      id: idOpenAi,
+      message: openAiData.result,
+      created_at: Date.now(),
+      username: "CircuitAI",
+      profilePic: "/circuitai-avatar.png",
+      email: "openAi.02W39r48a7F02t9@gmail.com",
+    };
+
+    const uploadOpenAiAnswerToRedis = async () => {
+      const data = await fetch("/api/addMessage", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userSession,
+          message: messageOpenAi,
+        }),
+      }).then((res) => res.json());
+
+      return [data.message, ...messages!];
+    };
+
+    await mutate(uploadOpenAiAnswerToRedis, {
+      optimisticData: [messageOpenAi, ...messages!],
+      rollbackOnError: true,
+    });
+  }
 
   return (
     <form
