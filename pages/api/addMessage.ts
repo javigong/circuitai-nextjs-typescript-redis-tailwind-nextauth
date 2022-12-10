@@ -22,7 +22,7 @@ export default async function handler(
     return;
   }
 
-  const { message } = req.body;
+  const { userSession, message } = req.body;
 
   const newMessage = {
     ...message,
@@ -30,8 +30,8 @@ export default async function handler(
   };
 
   // Push the new message to Redis (Upstash)
-  await redis.hset("messages", message.id, JSON.stringify(newMessage));
-  serverPusher.trigger("messages", "new-message", newMessage);
+  await redis.hset(userSession, message.id, JSON.stringify(newMessage));
+  serverPusher.trigger(userSession, "new-message", newMessage);
 
   res.status(200).json({ message: newMessage });
 }
