@@ -1,4 +1,5 @@
 "use client";
+import { Session } from "next-auth";
 import { useEffect } from "react";
 import useSWR from "swr";
 import { clientPusher } from "../pusher";
@@ -6,29 +7,32 @@ import { IMessage } from "../types/typings";
 import fetchMessages from "../utils/fetchMessages";
 import MessageComponent from "./MessageComponent";
 
-type Props = {};
+type Props = {
+  session: Session | null;
+};
 
-const MessageList = (props: Props) => {
+const MessageList = ({ session }: Props) => {
+  const userSession = session?.user?.email?.replace("@", "").replace(".", "");
   const {
     data: messages,
     error,
     mutate,
-  } = useSWR<IMessage[]>("/api/getMessages", fetchMessages);
+  } = useSWR(`/api/getMessages/${userSession!}`, fetchMessages);
 
   useEffect(() => {
     // Subscribe to the messages channel
-    const channel = clientPusher.subscribe("messages");
+    const channel = clientPusher.subscribe(userSession!);
     // When a new message is received, add it to the list
     channel.bind("new-message", async (data: IMessage) => {
       // If the message is already in the list, don't add it again
       if (messages?.find((message) => message.id === data.id)) return;
       // If the message list is empty, fetch it
       if (!messages) {
-        mutate(fetchMessages);
+        mutate(fetchMessages(userSession!));
       } else {
         // Add the new message to the list
         // If the mutation fails, the message will be removed from the list
-        mutate(fetchMessages, {
+        mutate(fetchMessages(userSession!), {
           optimisticData: [data, ...messages!],
           rollbackOnError: true,
         });
