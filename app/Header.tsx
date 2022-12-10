@@ -12,7 +12,7 @@ const Header = async (props: Props) => {
   if (session)
     return (
       <>
-        <header className="sticky top-0 z-50 bg-white flex justify-between items-center p-10 shadow-sm">
+        <header className="sticky top-0 z-50 bg-white flex justify-between items-center px-10 py-5 shadow-sm">
           <div className="flex space-x-2">
             <Image
               className="rounded-full mx-2 object-cover"
@@ -34,7 +34,7 @@ const Header = async (props: Props) => {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white flex justify-between items-center p-10 shadow-sm">
+      <header className="sticky top-0 z-50 bg-white flex justify-between items-center px-10 py-2 shadow-sm">
         <div className="flex flex-col items-center space-y-5">
           <div className="flex space-x-2 items-center">
             <Image
@@ -47,7 +47,7 @@ const Header = async (props: Props) => {
           </div>
         </div>
         <Link
-          className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
+          className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold text-sm py-2 px-4 rounded"
           href="/auth/signin"
         >
           Sign In
