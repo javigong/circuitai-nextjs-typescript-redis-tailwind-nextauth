@@ -12,7 +12,7 @@ const HomePage = async (props: Props) => {
   return (
     <Providers session={session}>
       <main>
-        <MessageList />
+        <MessageList session={session} />
         <ChatInput session={session} />
       </main>
     </Providers>
