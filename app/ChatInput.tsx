@@ -20,8 +20,6 @@ const ChatInput = ({ session }: Props) => {
     mutate,
   } = useSWR(`/api/getMessages/${userSession!}`, fetchMessages);
 
-  console.log({ messages });
-
   const addMessage = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
@@ -75,7 +73,6 @@ const ChatInput = ({ session }: Props) => {
       body: JSON.stringify({ question: messageToSend }),
     });
     const openAiData = await openAiResponse.json();
-    console.log(messageToSend);
 
     // Send answer to Redis
     const idOpenAi = uuid();
