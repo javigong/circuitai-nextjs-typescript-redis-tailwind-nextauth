@@ -7,7 +7,7 @@ import Providers from "./providers";
 type Props = {};
 
 const HomePage = async (props: Props) => {
-  const session = await unstable_getServerSession(authOptions);
+  const session = await unstable_getServerSession();
 
   return (
     <Providers session={session}>
