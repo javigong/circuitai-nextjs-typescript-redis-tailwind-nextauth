@@ -18,7 +18,7 @@ const SignInPage = async (props: Props) => {
           width={300}
         />
       </div>
-      <SignInComponent providers={providers!} />
+      <SignInComponent providers={providers} />
     </div>
   );
 };
