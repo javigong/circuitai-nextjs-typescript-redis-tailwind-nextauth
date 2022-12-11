@@ -1,13 +1,12 @@
 import { unstable_getServerSession } from "next-auth/next";
 import Image from "next/image";
 import Link from "next/link";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
 import LogoutButton from "./LogoutButton";
 
 type Props = {};
 
 const Header = async (props: Props) => {
-  const session = await unstable_getServerSession(authOptions);
+  const session = await unstable_getServerSession();
 
   if (session)
     return (
