@@ -1,6 +1,6 @@
 # CircuitAI: AI ChatBot powered by OpenAI GPT-3
 
-CircuitAI is a case study of an AI ChatBot implemented with Next.js, TypeScript, Tailwind CSS, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, and Google Auth.
+CircuitAI is a case study of an real-time AI chatbot assistant implemented with Next.js, TypeScript, Tailwind CSS, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, and Google Auth.
 
 Includes OpenAI GTP-3 models that can understand and generate natural language, in-memory real-time database, and stale-while-revalidate HTTP cache invalidation strategy.
 
