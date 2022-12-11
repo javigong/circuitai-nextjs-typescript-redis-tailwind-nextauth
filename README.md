@@ -1,27 +1,41 @@
-# Next.js + Tailwind CSS Example
+# CircuitAI: AI ChatBot powered by OpenAI GPT-3
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.2)](https://tailwindcss.com/blog/tailwindcss-v3-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+CircuitAI is a case study of a AI ChatBot implemented with Next.js, TypeScript, Tailwind CSS, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, and Google Auth.
 
-## Deploy your own
+Includes OpenAI GTP-3 models that can understand and generate natural language, in-memory real-time database, and stale-while-revalidate HTTP cache invalidation strategy.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+![smartmockups_lbjquahn](https://user-images.githubusercontent.com/42308135/206926769-bd09cce4-c213-4079-8672-5539515603dc.jpg)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
+🔗 [Open live Demo](https://travel-nextjs-typescript-tailwind-mapbox-calendar-date-picker.vercel.app/)
 
-## How to use
+## Tech Stack
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+- Next.js 13 (App directory (beta) with React Server Components) 
+- React.js
+- TypeScript
+- Tailwind CSS
+- OpenAI API, GPT-3 models
+- SWR
+- Upstash
+- Redis in-memory DB
+- Pusher real-time Channels
+- NextAuth
+- Google Auth
 
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Features
 
-```bash
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
+- Responsive UI with Tailwind CSS.
+- AI ChatBot that can understand general natural language.
+- Chat log stored in Redis.
+- Data fetching and caching techniques using SWR— a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.
+- User Authentication with NextAuth and Google OAuth.
+- Robust code using TypeScript.
 
-```bash
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
-```
+## Screenshots
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+![smartmockups_lbjrotzr](https://user-images.githubusercontent.com/42308135/206926808-4ff4161c-725c-4377-8a2f-7c3824c3bfa1.jpg)
+
+## Deployment details
+
+Travel Bookings deployed using Vercel: [https://travel-nextjs-typescript-tailwind-mapbox-calendar-date-picker.vercel.app/](https://travel-nextjs-typescript-tailwind-mapbox-calendar-date-picker.vercel.app/)
+
