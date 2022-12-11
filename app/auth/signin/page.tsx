@@ -8,17 +8,16 @@ const SignInPage = async (props: Props) => {
   const providers = await getProviders();
 
   return (
-    <div className="grid justify-center space-y-5 py-5">
-      <div>
+    <div className="h-[80vh] flex flex-col space-y-8 bg-white">
+      <div className="flex flex-grow">
         <Image
-          className="rounded-lg mx-auto object-cover"
+          className="rounded-lg mx-auto mt-auto object-cover"
           src="/circuitai-square.svg"
           alt="Profile Picture"
           height={300}
           width={300}
         />
       </div>
-
       <SignInComponent providers={providers} />
     </div>
   );
