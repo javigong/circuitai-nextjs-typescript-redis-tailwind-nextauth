@@ -31,12 +31,7 @@ const SignInComponent = (props: Props) => {
           <div key={provider?.name!}>
             <button
               className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
-              onClick={() =>
-                signIn(provider?.id!, {
-                  callbackUrl:
-                    process.env.NEXTAUTH_URL,
-                })
-              }
+              onClick={() => signIn(provider?.id!)}
             >
               Sign in with {provider?.name!}
             </button>
