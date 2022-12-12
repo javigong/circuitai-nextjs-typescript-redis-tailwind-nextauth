@@ -1,7 +1,5 @@
 "use client";
 import { getProviders, signIn } from "next-auth/react";
-import { IProvider } from "../../../types/typings";
-
 
 type Props = {
   providers: Awaited<ReturnType<typeof getProviders>>;
