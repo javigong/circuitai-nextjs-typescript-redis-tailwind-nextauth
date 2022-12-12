@@ -1,12 +1,15 @@
-import { getProviders } from "next-auth/react";
 import Image from "next/image";
+import { IProviderData } from "../../../types/typings";
+import fetchProviders from "../../../utils/fetchProviders";
 import SignInComponent from "./SignInComponent";
 
 type Props = {};
 
 const SignInPage = async (props: Props) => {
-  const resProviders = await getProviders();
-  const providers = Object.values(resProviders!)
+  // const resProviders = await getProviders();
+  const resProviders = await fetchProviders();
+
+  const providers: IProviderData[] = Object.values(resProviders!);
 
   return (
     <div className="h-[80vh] flex flex-col space-y-8 bg-white">

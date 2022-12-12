@@ -11,7 +11,7 @@ const SignInComponent = ({ providers }: Props) => {
 
   return (
     <div className="flex flex-grow justify-center">
-      {providers! &&
+      {providers?.length > 0 &&
         providers?.map((provider) => (
           <div key={provider?.name}>
             <button

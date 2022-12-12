@@ -1,3 +1,4 @@
+import { Session } from "next-auth";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
 import TimeAgo from 'react-timeago';
@@ -5,10 +6,11 @@ import { IMessage } from "../types/typings";
 
 type Props = {
   message: IMessage;
+  session: Session | null;
 };
 
-const MessageComponent = ({ message }: Props) => {
-  const { data: session } = useSession();
+const MessageComponent = ({ message, session }: Props) => {
+  // const { data: session } = useSession();
   const isUser = session?.user?.email === message.email;
 
   return (
