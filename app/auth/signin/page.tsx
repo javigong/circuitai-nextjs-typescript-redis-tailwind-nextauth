@@ -5,7 +5,8 @@ import SignInComponent from "./SignInComponent";
 type Props = {};
 
 const SignInPage = async (props: Props) => {
- const providers = await getProviders();
+  const resProviders = await getProviders();
+  const providers = Object.values(resProviders!)
 
   return (
     <div className="h-[80vh] flex flex-col space-y-8 bg-white">
