@@ -2,13 +2,15 @@
 import { getProviders, signIn } from "next-auth/react";
 
 type Props = {
-  providers: Awaited<ReturnType<typeof getProviders>>;
+  providers: Awaited<ReturnType<typeof getProviders>> | null;
 };
 
 const SignInComponent = ({ providers }: Props) => {
+  const providerArray = Object.values(providers!);
+
   return (
     <div className="flex flex-grow justify-center">
-      {Object?.values(providers!)?.map((provider) => (
+      {providerArray?.map((provider) => (
         <div key={provider.name}>
           <button
             className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"

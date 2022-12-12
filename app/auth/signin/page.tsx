@@ -5,8 +5,8 @@ import SignInComponent from "./SignInComponent";
 type Props = {};
 
 const SignInPage = async (props: Props) => {
-  const providers = await getProviders();
-  
+ const providers = await getProviders();
+
   return (
     <div className="h-[80vh] flex flex-col space-y-8 bg-white">
       <div className="flex flex-grow">
@@ -18,7 +18,7 @@ const SignInPage = async (props: Props) => {
           width={300}
         />
       </div>
-      <SignInComponent providers={providers} />
+      <SignInComponent providers={providers!} />
     </div>
   );
 };
