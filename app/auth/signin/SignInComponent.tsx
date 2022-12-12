@@ -1,26 +1,44 @@
-import { ClientSafeProvider, getProviders, signIn } from "next-auth/react";
-import { IProviderData } from "../../../types/typings";
+"use client";
 
-type Props = {
-  providers: ClientSafeProvider[];
-};
+import { BuiltInProviderType } from "next-auth/providers";
+import {
+  ClientSafeProvider,
+  getProviders,
+  LiteralUnion,
+  signIn,
+} from "next-auth/react";
+import { useEffect, useState } from "react";
 
-const SignInComponent = (providers: Props) => {
+type Props = {};
+
+const SignInComponent = (props: Props) => {
+  const [providers, setProviders] = useState<Record<
+    LiteralUnion<BuiltInProviderType, string>,
+    ClientSafeProvider
+  > | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      const res = await getProviders();
+      setProviders(res);
+    })();
+  }, []);
+
   return (
     <div className="flex flex-grow justify-center">
-      {providers.providers &&
-        providers.providers.map((provider) => (
-          <div key={provider?.name}>
+      {providers &&
+        Object.values(providers!).map((provider) => (
+          <div key={provider?.name!}>
             <button
               className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
               onClick={() =>
-                signIn(provider?.id, {
+                signIn(provider?.id!, {
                   callbackUrl:
-                    process.env.VERCEL_URL || "http://localhost:3000",
+                    process.env.NEXTAUTH_URL,
                 })
               }
             >
-              Sign in with {provider?.name}
+              Sign in with {provider?.name!}
             </button>
           </div>
         ))}
@@ -29,14 +47,3 @@ const SignInComponent = (providers: Props) => {
 };
 
 export default SignInComponent;
-
-export async function getServerSideProps() {
-  const res = await getProviders();
-  const providers = Object.values(res!)
-
-  return {
-    props: {
-      providers,
-    },
-  };
-}
