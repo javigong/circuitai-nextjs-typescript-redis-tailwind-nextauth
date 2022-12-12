@@ -10,5 +10,4 @@ export const config = {
     "/node_modules/next-auth/next/middleware.js",
     "/node_modules/next-auth/middleware.js",
   ],
-  matcher: ["/"],
 };
