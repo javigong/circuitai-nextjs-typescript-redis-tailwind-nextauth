@@ -3,7 +3,7 @@ import SignInComponent from "./SignInComponent";
 
 type Props = {};
 
-const SignInPage = async (props: Props) => {
+const SignInPage = (props: Props) => {
   return (
     <div className="h-[80vh] flex flex-col space-y-8 bg-white">
       <div className="flex flex-grow">
