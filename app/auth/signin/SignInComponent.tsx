@@ -1,18 +1,15 @@
-"use client";
-
-import { getProviders, signIn } from "next-auth/react";
+import { ClientSafeProvider, getProviders, signIn } from "next-auth/react";
 import { IProviderData } from "../../../types/typings";
 
 type Props = {
-  providers: IProviderData[];
+  providers: ClientSafeProvider[];
 };
 
-const SignInComponent = ({ providers }: Props) => {
-
+const SignInComponent = (providers: Props) => {
   return (
     <div className="flex flex-grow justify-center">
-      {providers?.length > 0 &&
-        providers?.map((provider) => (
+      {providers.providers &&
+        providers.providers.map((provider) => (
           <div key={provider?.name}>
             <button
               className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
@@ -32,3 +29,14 @@ const SignInComponent = ({ providers }: Props) => {
 };
 
 export default SignInComponent;
+
+export async function getServerSideProps() {
+  const res = await getProviders();
+  const providers = Object.values(res!)
+
+  return {
+    props: {
+      providers,
+    },
+  };
+}
