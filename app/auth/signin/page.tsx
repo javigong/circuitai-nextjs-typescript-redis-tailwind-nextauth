@@ -6,7 +6,7 @@ type Props = {};
 
 const SignInPage = async (props: Props) => {
   const providers = await getProviders();
-
+  
   return (
     <div className="h-[80vh] flex flex-col space-y-8 bg-white">
       <div className="flex flex-grow">
