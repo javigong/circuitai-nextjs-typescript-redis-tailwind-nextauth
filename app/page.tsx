@@ -1,5 +1,4 @@
 import { unstable_getServerSession } from "next-auth";
-import { authOptions } from "../pages/api/auth/[...nextauth]";
 import ChatInput from "./ChatInput";
 import MessageList from "./MessageList";
 import Providers from "./providers";
