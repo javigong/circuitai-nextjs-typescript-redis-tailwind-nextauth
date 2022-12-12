@@ -34,7 +34,7 @@ const SignInComponent = (props: Props) => {
               onClick={() =>
                 signIn(provider?.id!, {
                   callbackUrl:
-                    process.env.VERCEL_URL,
+                    process.env.NEXTAUTH_URL,
                 })
               }
             >
