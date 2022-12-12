@@ -3,6 +3,7 @@ module.exports = {
   // typescript: {
   //   ignoreBuildErrors: true,
   // },
+  swcMinify: false,
   reactStrictMode: true,
   experimental: {
     appDir: true,
