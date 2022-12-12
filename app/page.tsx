@@ -9,12 +9,12 @@ const HomePage = async (props: Props) => {
   const session = await unstable_getServerSession();
 
   return (
-    // <Providers session={session}>
+    <Providers session={session}>
       <main>
         <MessageList session={session} />
         <ChatInput session={session} />
       </main>
-    // </Providers>
+    </Providers>
   );
 };
 
