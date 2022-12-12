@@ -1,7 +1,7 @@
-import NextAuth from "next-auth";
+import NextAuth, { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-export const authOptions = {
+export const authOptions: NextAuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
@@ -10,7 +10,7 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
-  secret: process.env.NEXT_PUBLIC_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
   pages: {
     signIn: "/auth/signin",
   }
