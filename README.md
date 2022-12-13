@@ -1,4 +1,4 @@
-# CircuitAI: AI ChatBot Assistant
+# CircuitAI: AI ChatBot Assistant powered with OpenAI GPT-3 model
 
 CircuitAI is a case study of an real-time AI chatbot assistant implemented with Next.js, TypeScript, Tailwind CSS, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, and Google Auth.
 
@@ -22,7 +22,8 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 - Redis in-memory DB
 - Pusher real-time Channels
 - NextAuth
-- Google Auth
+- Google OAuth
+- GitHub OAuth
 
 ## Features
 
@@ -30,7 +31,7 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 - AI ChatBot that can understand general natural language.
 - Chat log stored in Redis.
 - Data fetching and caching techniques using SWR— a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.
-- User Authentication with NextAuth and Google OAuth.
+- NextAuth with Google and GitHub OAuth providers.
 - Robust code using TypeScript.
 
 ## Screenshots
