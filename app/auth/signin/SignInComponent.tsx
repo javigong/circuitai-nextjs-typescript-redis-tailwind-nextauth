@@ -12,19 +12,18 @@ import { useEffect, useState } from "react";
 type Props = {};
 
 const SignInComponent = (props: Props) => {
-  const [providers, setProviders] = useState<Record<
-    LiteralUnion<BuiltInProviderType, string>,
-    ClientSafeProvider
-  > | null>(null);
+  // const [providers, setProviders] = useState<Record<
+  //   LiteralUnion<BuiltInProviderType, string>,
+  //   ClientSafeProvider
+  // > | null>(null);
 
-  useEffect(() => {
-    (async () => {
-      const res = await getProviders();
-      setProviders(res);
-    })();
-  }, []);
-
-  console.log(providers);
+  // useEffect(() => {
+  //   (async () => {
+  //     const res = await getProviders();
+  //     setProviders(res);
+  //   })();
+  // }, []);
+  // console.log(providers);
 
   return (
     <div className="flex flex-grow flex-col items-center">
