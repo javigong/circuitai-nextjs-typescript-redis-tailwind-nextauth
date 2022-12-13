@@ -17,7 +17,7 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 - TypeScript
 - Tailwind CSS
 - OpenAI API, GPT-3 models
-- SWR
+- SWR (stale-while-revalidate)
 - Upstash
 - Redis in-memory DB
 - Pusher real-time Channels
