@@ -39,5 +39,5 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ## Deployment details
 
-Travel Bookings deployed using Vercel: [https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/)
+CircuitAI deployed using Vercel: [https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/)
 
