@@ -6,7 +6,7 @@ Includes OpenAI GTP-3 models that can understand and generate natural language, 
 
 I used NextJS 13 with the new app directory structure–still in beta–that integrates new feature from React 18 like the new React server components (RSC) or the new data fetching.
 
-![smartmockups_lbjquahn](https://user-images.githubusercontent.com/42308135/206926769-bd09cce4-c213-4079-8672-5539515603dc.jpg)
+![smartmockups_lbmljzkr](https://user-images.githubusercontent.com/42308135/207423426-f4a460d0-3755-4012-bfcd-3342ce1a4fc5.jpg)
 
 🔗 [Open live Demo](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app)
 
@@ -36,6 +36,8 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ## Screenshots
 
+![smartmockups_lbml1dou](https://user-images.githubusercontent.com/42308135/207420603-607080f4-302b-492b-a289-d2ca4ff62590.jpg)
+![smartmockups_lbmlaw7x](https://user-images.githubusercontent.com/42308135/207421893-60a549ca-ee6d-48db-a9fd-e4c8ef96f4ac.jpg)
 ![smartmockups_lbjrotzr](https://user-images.githubusercontent.com/42308135/206926808-4ff4161c-725c-4377-8a2f-7c3824c3bfa1.jpg)
 
 ## Deployment details
