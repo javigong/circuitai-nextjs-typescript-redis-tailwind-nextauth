@@ -1,4 +1,4 @@
-# CircuitAI: AI ChatBot Assistant powered with OpenAI GPT-3 model
+# CircuitAI: AI ChatBot Assistant with OpenAI GPT-3 model
 
 CircuitAI is a case study of an real-time AI chatbot assistant implemented with Next.js, TypeScript, Tailwind CSS, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, Google OAuth, and GitHub OAuth.
 
