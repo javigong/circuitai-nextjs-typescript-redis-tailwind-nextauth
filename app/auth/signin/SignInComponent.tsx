@@ -22,7 +22,7 @@ const SignInComponent = (props: Props) => {
       const res = await getProviders();
       setProviders(res);
     })();
-  }, [providers]);
+  }, []);
 
   return (
     <div className="flex flex-grow justify-center">
