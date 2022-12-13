@@ -22,7 +22,7 @@ const SignInComponent = (props: Props) => {
       const res = await getProviders();
       setProviders(res);
     })();
-  }, []);
+  }, [providers]);
 
   return (
     <div className="flex flex-grow justify-center">
@@ -33,8 +33,7 @@ const SignInComponent = (props: Props) => {
               className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded"
               onClick={() =>
                 signIn(provider?.id!, {
-                  callbackUrl:
-                    process.env.NEXTAUTH_URL,
+                  callbackUrl: `${window.location.origin}/`,
                 })
               }
             >
