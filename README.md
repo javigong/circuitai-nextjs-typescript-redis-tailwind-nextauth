@@ -36,9 +36,9 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ## Screenshots
 
-![smartmockups_lbml1dou](https://user-images.githubusercontent.com/42308135/207420603-607080f4-302b-492b-a289-d2ca4ff62590.jpg)
+![smartmockups_lbmlyh6h](https://user-images.githubusercontent.com/42308135/207427693-25d0b82a-390e-442e-89c6-233e1c20972b.jpg)
 ![smartmockups_lbmlaw7x](https://user-images.githubusercontent.com/42308135/207421893-60a549ca-ee6d-48db-a9fd-e4c8ef96f4ac.jpg)
-![smartmockups_lbjrotzr](https://user-images.githubusercontent.com/42308135/206926808-4ff4161c-725c-4377-8a2f-7c3824c3bfa1.jpg)
+![smartmockups_lbmmd217](https://user-images.githubusercontent.com/42308135/207427430-c421bd0b-563c-447c-908e-cf35f53c2d89.jpg)
 
 ## Deployment details
 
