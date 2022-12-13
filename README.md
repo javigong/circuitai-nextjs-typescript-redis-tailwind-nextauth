@@ -12,8 +12,8 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ## Tech Stack
 
-- Next.js 13 (App directory (beta) with React Server Components) 
-- React.js 18
+- Next.js v13 (App directory (beta) with React Server Components) 
+- React.js v18
 - TypeScript
 - Tailwind CSS
 - OpenAI API, GPT-3 models
