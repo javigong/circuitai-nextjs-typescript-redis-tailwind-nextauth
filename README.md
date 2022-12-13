@@ -8,7 +8,7 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ![smartmockups_lbjquahn](https://user-images.githubusercontent.com/42308135/206926769-bd09cce4-c213-4079-8672-5539515603dc.jpg)
 
-🔗 [Open live Demo](https://travel-nextjs-typescript-tailwind-mapbox-calendar-date-picker.vercel.app/)
+🔗 [Open live Demo](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app)
 
 ## Tech Stack
 
