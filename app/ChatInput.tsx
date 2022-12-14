@@ -117,12 +117,12 @@ const ChatInput = ({ session }: Props) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
         placeholder="Enter message here..."
-        className="flex-1 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#74E6DA] focus:border-transparent py-2 px-4 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="flex-1 rounded border border-gray-300 transition-all focus:outline-none focus:ring-2 focus:ring-[#74E6DA] focus:border-transparent py-2 px-4 disabled:opacity-50 disabled:cursor-not-allowed"
       />
       <button
         type="submit"
         disabled={!input}
-        className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed"
+        className="bg-[#74E6DA] transition-all hover:bg-[#60beb5] text-white font-bold py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed"
       >
         Send
       </button>

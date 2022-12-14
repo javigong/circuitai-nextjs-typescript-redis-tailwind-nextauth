@@ -46,7 +46,7 @@ const Header = async (props: Props) => {
           </div>
         </div>
         <Link
-          className="bg-[#74E6DA] hover:bg-[#60beb5] text-white font-bold text-sm py-2 px-4 rounded"
+          className="bg-[#74E6DA] transition-all hover:bg-[#60beb5] text-white font-bold text-sm py-2 px-4 rounded"
           href="/auth/signin"
         >
           Sign In

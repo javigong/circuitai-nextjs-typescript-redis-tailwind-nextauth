@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { Session } from "next-auth";
 import { useEffect } from "react";
 import useSWR from "swr";
@@ -48,11 +49,20 @@ const MessageList = ({ session }: Props) => {
   }, [messages, mutate, clientPusher]);
 
   return (
-    <div className="space-y-5 px-5 pt-8 pb-32 max-w-2xl xl:max-w-4xl mx-auto">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="space-y-5 px-5 pt-8 pb-32 max-w-2xl xl:max-w-4xl mx-auto"
+    >
       {messages?.map((message) => (
-        <MessageComponent key={message.id} message={message} session={session} />
+        <MessageComponent
+          key={message.id}
+          message={message}
+          session={session}
+        />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
