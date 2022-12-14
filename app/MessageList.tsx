@@ -50,8 +50,9 @@ const MessageList = ({ session }: Props) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0,
+      y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
       className="space-y-5 px-5 pt-8 pb-32 max-w-2xl xl:max-w-4xl mx-auto"
     >
