@@ -1,10 +1,14 @@
 # CircuitAI: AI ChatBot Assistant with OpenAI GPT-3 model
 
-CircuitAI is a case study of an real-time AI chatbot assistant implemented with Next.js, TypeScript, Tailwind CSS, Framer Motion, OpenAI API, SWR, Upstash, Redis DB, Pusher Channels, NextAuth, Google OAuth, and GitHub OAuth.
+CircuitAI is a case study of a full-stack web application featuring a chatbot assistant powered by the OpenAI API.
 
-Includes OpenAI GTP-3 models that can understand and generate natural language, in-memory real-time database with Redis, and SWR cache invalidation strategy.
-
-I used NextJS 13 with the new app directory structure–still in beta–that integrates new feature from React 18 like the new React server components (RSC) or the new data fetching.
+- Used Davinci AI model that can understand user questions and generate natural language responses.
+- Utilized Next.js v13 with the experimental appDirectory feature and TypeScript on the front-end, with Upstash and Redis for serverless back-end functionality. 
+- Implemented OAuth for user authentication and Pusher Channels for real-time messaging. 
+- Used SWR for efficient data fetching and caching. 
+- Styled the application with Tailwind CSS. 
+- Utilized Framer Motion to create interactive and animated UI components.
+- This project allowed me to explore the capabilities of artificial intelligence in web development and gain experience with serverless architecture and real-time communication.
 
 ![smartmockups_lbmljzkr](https://user-images.githubusercontent.com/42308135/207423426-f4a460d0-3755-4012-bfcd-3342ce1a4fc5.jpg)
 
@@ -12,8 +16,8 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 
 ## Tech Stack
 
-- Next.js v13 (App directory (beta) with React Server Components) 
-- React.js v18
+- Next.js
+- React.js
 - TypeScript
 - Tailwind CSS
 - Framer Motion
@@ -41,7 +45,57 @@ I used NextJS 13 with the new app directory structure–still in beta–that int
 ![smartmockups_lbmlaw7x](https://user-images.githubusercontent.com/42308135/207421893-60a549ca-ee6d-48db-a9fd-e4c8ef96f4ac.jpg)
 ![smartmockups_lbmmd217](https://user-images.githubusercontent.com/42308135/207427430-c421bd0b-563c-447c-908e-cf35f53c2d89.jpg)
 
+## Installation
+
+First, clone the project and open it with Visual Studio Code:
+
+```bash
+git clone https://github.com/javigong/circuitai-nextjs-typescript-redis-tailwind-nextauth.git
+
+cd circuitai-nextjs-typescript-redis-tailwind-nextauth
+
+code .
+```
+
+Then, create a .env.local file in the root of the project and configure the following environment variables:
+
+```
+# Redis DB
+REDIS_URL=
+
+# Pusher
+PUSHER_APP_ID=
+NEXT_PUBLIC_PUSHER_KEY=
+NEXT_PUBLIC_PUSHER_CLUSTER=
+
+# Vercel system variables
+VERCEL_URL=
+
+#Google Auth
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+
+# Next Auth
+NEXTAUTH_URL=
+NEXTAUTH_SECRET=
+
+# OpenAI
+OPENAI_API_KEY=
+```
+
+Finally, install the npm dependencies and run the application:
+
+```bash
+npm install
+
+npm run dev
+```
+
+Now the application is running on http://localhost:3000 🚀
+
 ## Deployment details
 
-CircuitAI deployed using Vercel: [https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/)
+CircuitAI deployed using Vercel: 
+
+[https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/](https://circuitai-nextjs-typescript-redis-tailwind-nextauth-javigong.vercel.app/)
 
