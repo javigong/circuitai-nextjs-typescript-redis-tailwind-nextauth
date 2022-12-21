@@ -8,6 +8,7 @@ CircuitAI is a case study of a full-stack web application featuring a chatbot as
 - Used SWR for efficient data fetching and caching. 
 - Styled the application with Tailwind CSS. 
 - Utilized Framer Motion to create interactive and animated UI components.
+- Set up continuous integration and deployment using GitHub Actions
 - This project allowed me to explore the capabilities of artificial intelligence in web development and gain experience with serverless architecture and real-time communication.
 
 ![smartmockups_lbmljzkr](https://user-images.githubusercontent.com/42308135/207423426-f4a460d0-3755-4012-bfcd-3342ce1a4fc5.jpg)
