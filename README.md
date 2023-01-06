@@ -26,7 +26,7 @@ CircuitAI is a case study of a full-stack web application featuring a chatbot as
 - SWR (stale-while-revalidate)
 - Upstash
 - Redis in-memory DB
-- Pusher real-time Channels
+- Pusher real-time Channels (WebSocket API)
 - NextAuth
 - Google OAuth
 - GitHub OAuth
@@ -35,6 +35,7 @@ CircuitAI is a case study of a full-stack web application featuring a chatbot as
 
 - Responsive UI with Tailwind CSS.
 - AI ChatBot that can understand general natural language.
+- Chat messages updated in real-time via WebSockets.
 - Chat log stored in Redis.
 - Data fetching and caching techniques using SWR— a strategy to first return the data from cache (stale), then send the fetch request (revalidate), and finally come with the up-to-date data.
 - NextAuth with Google and GitHub OAuth providers.
